@@ -17,17 +17,10 @@ const createDate = (dates, index) => {
       resultdate.sort((a,b) => a - b);
       return resultdate.join("-");
     } else {
-     const sortDate = new Date(dates[index]).getTime() / 1000;
+     const sortDate = (Date.parse(dates[index]) / 1000).toString();;
       resultdate.push(sortDate);
       return resultdate.join("-");
       };
-  // if (index >=0 && index < dates.length) {
-  //   let resultDate = [];
-  //     dates.map((item) => {
-  //       resultDate.push((Date.parse(item) / 1000).toString());
-  // })
-  //   return resultDate;
-  // } 
 }
 
 // ! JANGAN DIMODIFIKASI
